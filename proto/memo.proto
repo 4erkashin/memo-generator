@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package finance.lombard.memo;
+
+option go_package = "./shared/types;types";
+
+// The IDEA from https://github.com/bitcoin/bips/blob/master/bip-0070.mediawiki
+
+enum BlockchainType {
+    BLOCKCHAIN_TYPE_UNSPECIFIED = 0;
+    BLOCKCHAIN_TYPE_EVM = 1;
+    BLOCKCHAIN_TYPE_COSMOS = 2;
+}
+
+message Output {
+    uint64 amount = 1;
+    bytes script = 2;
+}
+
+message DestinationInfo {
+    BlockchainType chain_type = 1;
+    bytes chain_id = 2;
+    bytes address = 3;
+}
+
+message Stake {
+    DestinationInfo destination_info = 1;
+    repeated Output refund_to = 4;
+}
