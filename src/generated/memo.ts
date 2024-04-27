@@ -2,7 +2,7 @@
 import * as _m0 from "protobufjs/minimal";
 import Long = require("long");
 
-export const protobufPackage = "finance.lombard.memo";
+export const protobufPackage = "";
 
 export enum BlockchainType {
   BLOCKCHAIN_TYPE_UNSPECIFIED = 0,
@@ -232,7 +232,7 @@ export const Stake = {
       DestinationInfo.encode(message.destinationInfo, writer.uint32(10).fork()).ldelim();
     }
     for (const v of message.refundTo) {
-      Output.encode(v!, writer.uint32(34).fork()).ldelim();
+      Output.encode(v!, writer.uint32(18).fork()).ldelim();
     }
     return writer;
   },
@@ -251,8 +251,8 @@ export const Stake = {
 
           message.destinationInfo = DestinationInfo.decode(reader, reader.uint32());
           continue;
-        case 4:
-          if (tag !== 34) {
+        case 2:
+          if (tag !== 18) {
             break;
           }
 
