@@ -17,5 +17,9 @@
     "ts-node": "^10.9.2",
     "ts-proto": "^1.172.0",
     "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "long": "^5.2.3",
+    "protobufjs": "^7.2.6"
   }
 }
