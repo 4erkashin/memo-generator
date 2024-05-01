@@ -1,11 +1,18 @@
 {
   "name": "memo-generator",
   "version": "0.0.1",
-  "main": "index.ts",
-  "repository": "https://github.com/lombard-finance/memo-generator",
+  "private": false,
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lombard-finance/memo-generator.git"
+  },
   "author": "Lombard Finance",
   "license": "MIT",
-  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "devDependencies": {
     "ts-node": "^10.9.2",
     "ts-proto": "^1.172.0",
